@@ -39,7 +39,7 @@
 	{
 		global $CanonBaseURL;
 		global $wgRequest;
-		$pg_title = $wgRequest->getVal( 'title' );
+		$pg_title = urlencode($wgRequest->getVal( 'title' ));
 		$out->addHeadItem( 'canonical',
 		'<link rel="canonical" href="'.$CanonBaseURL.$pg_title.'" />'."\n"
 
