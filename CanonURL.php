@@ -19,7 +19,7 @@
 		die( 1 );
 	}
 	
-	define( 'CanonURL_VERSION', '0.1' );
+	define( 'CanonURL_VERSION', '0.2' );
 	
 	$wgExtensionCredits['other'][] = array(
 		'path' => __FILE__,
