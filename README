@@ -11,10 +11,7 @@ Written by Abhi M Balakrishnan (http://about.me/abhim)
 This version of CanonURL requires MediaWiki 1.19 or later.
 
 == Installing ==
-* Copy the CanonURL directory into the extensions folder of your MediaWiki installation.
-* Add following lines to your LocalSettings.php file towards the end:
-	$CanonBaseURL = "http://127.0.0.1/wiki/";
-	require_once("$IP/extensions/CanonURL/CanonURL.php");
+Copy the CanonURL directory into the extensions folder of your MediaWiki installation.
 
 == Verifying the installation ==
 See [[Special:Version]] and confirm the presence of CanonURL under "Installed extensions", "other" category

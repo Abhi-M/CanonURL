@@ -37,12 +37,9 @@
 	 
 	function CanonURL($out)
 	{
-		global $CanonBaseURL;
-		global $wgRequest;
-		$pg_title = $wgRequest->getVal( 'title' );
 		$out->addHeadItem( 'canonical',
-		'<link rel="canonical" href="' . htmlspecialchars( $CanonBaseURL . wfUrlencode( $pg_title ) ) . '" />'."\n"
+			'<link rel="canonical" href="' . htmlspecialchars( $out->getTitle()->getCanonicalURL() ) . '" />' . "\n"
+		);
+		return true;
+	}
 
-	);	 
-	return true;
-}
