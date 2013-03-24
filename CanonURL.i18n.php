@@ -5,13 +5,13 @@
  * @file CanonURL.i18n.php
  * @ingroup CanonURL
  *
- * @author Jeroen De Dauw
+ * @author Abhi M Balakrishnan
  */
 
 $messages = array();
 
 /** English
- * @author Abhi M Balakrishnan http://www.mediawiki.org/wiki/User:Abhi_M_Balakrishnan
+ * @author Abhi M Balakrishnan http://www.mediawiki.org/wiki/User:Abhi_M_Balakrishnan with the help of Timo Tijhof (http://www.mediawiki.org/wiki/User:Krinkle)
  */
 $messages['en'] = array(
 	'canonurl' => 'CanonURL',
