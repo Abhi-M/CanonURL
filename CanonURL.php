@@ -12,14 +12,14 @@
  *
  * @licence GNU GPL v3
  *
- * @author Abhi M Balakrishnan http://www.mediawiki.org/wiki/User:Abhi_M_Balakrishnan
+ * @author Abhi M Balakrishnan http://www.mediawiki.org/wiki/User:Abhi_M_Balakrishnan with the help of Timo Tijhof (http://www.mediawiki.org/wiki/User:Krinkle)
  */ 
 	if ( !defined( 'MEDIAWIKI' ) ) {
 		echo( "This file is an extension to the MediaWiki software and cannot be used standalone.\n" );
 		die( 1 );
 	}
 	
-	define( 'CanonURL_VERSION', '0.1' );
+	define( 'CanonURL_VERSION', '0.3' );
 	
 	$wgExtensionCredits['other'][] = array(
 		'path' => __FILE__,
@@ -34,14 +34,10 @@
 	 
 	global $wgHooks;
 	$wgHooks['BeforePageDisplay'][]  = 'CanonURL';
-	 
 	function CanonURL($out)
 	{
-		global $CanonBaseURL;
-		global $wgRequest;
-		$pg_title = urlencode($wgRequest->getVal( 'title' ));
 		$out->addHeadItem( 'canonical',
-		'<link rel="canonical" href="'.$CanonBaseURL.$pg_title.'" />'."\n"
+		'<link rel="canonical" href="' . htmlspecialchars( $out->getTitle()->getCanonicalURL()) . '" />' . "\n"
 
 	);	 
 	return true;
