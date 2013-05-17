@@ -36,8 +36,7 @@
 	$wgHooks['BeforePageDisplay'][]  = 'CanonURL';
 	function CanonURL($out)
 	{
-		$out->addHeadItem( 'canonical',
-		'<link rel="canonical" href="' . htmlspecialchars( $out->getTitle()->getCanonicalURL()) . '" />' . "\n"
+		$out->setCanonicalUrl( htmlspecialchars( $out->getTitle()->getCanonicalURL())
 
 	);	 
 	return true;
