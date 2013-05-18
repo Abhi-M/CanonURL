@@ -36,6 +36,14 @@
 	$wgHooks['BeforePageDisplay'][]  = 'CanonURL';
 	function CanonURL($out)
 	{
-		$out -> setCanonicalUrl($out->getTitle()->getCanonicalURL());
-		return true;
+		if ($out -> getRedirect() == '')
+		{
+			$out -> setCanonicalUrl($out->getTitle()->getCanonicalURL());
+			return true;
+		}
+		else
+		{
+			$out -> setCanonicalUrl($out->getRedirect());
+			return true;
+		}
 }
