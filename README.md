@@ -2,7 +2,7 @@ CanonURL
 ========
 Adds the canonical links to the head of Mediawiki pages according to Google Canonicalization Content Guidelines
 --------------------------------------------------------------------------
-README for the CanonURL extension 0.3
+README for the CanonURL extension 0.5
 Licenses: GNU General Public Licence (GPL)
           GNU Free Documentation License (GFDL)
 --------------------------------------------------------------------------
