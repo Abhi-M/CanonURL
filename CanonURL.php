@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 /**
  * Initialization file for the CanonURL extension.
@@ -13,14 +13,14 @@
  * @licence GNU GPL v3
  *
  * @author Abhi M Balakrishnan http://www.mediawiki.org/wiki/User:Abhi_M_Balakrishnan with the help of Timo Tijhof (http://www.mediawiki.org/wiki/User:Krinkle)
- */ 
+ */
 	if ( !defined( 'MEDIAWIKI' ) ) {
 		echo( "This file is an extension to the MediaWiki software and cannot be used standalone.\n" );
 		die( 1 );
 	}
-	
+
 	define( 'CanonURL_VERSION', '0.5' );
-	
+
 	$wgExtensionCredits['other'][] = array(
 		'path' => __FILE__,
 		'name' => 'CanonURL',
@@ -29,12 +29,12 @@
 		'url' => 'https://mediawiki.org/wiki/Extension:CanonURL',
 		'descriptionmsg' => 'canonurl-desc',
 	);
-	
+
 	$wgExtensionMessagesFiles['CanonURL'] = dirname( __FILE__ ) . '/CanonURL.i18n.php';
-	 
+
 	global $wgHooks;
 	$wgHooks['BeforePageDisplay'][]  = 'CanonURL';
-	function CanonURL($out)
+	function CanonURL( $out )
 	{
 		if ( $out->getRedirect() == '' )
 		{
