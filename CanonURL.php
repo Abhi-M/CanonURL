@@ -34,15 +34,11 @@
 
 	global $wgHooks;
 	$wgHooks['BeforePageDisplay'][]  = 'CanonURL';
-	function CanonURL( $out )
-	{
-		if ( $out->getRedirect() == '' )
-		{
+	function CanonURL( $out ) {
+		if ( $out->getRedirect() == '' ) {
 			$out->setCanonicalUrl( htmlspecialchars( $out->getTitle()->getCanonicalURL() ) );
 			return true;
-		}
-		else
-		{
+		} else {
 			$out->setCanonicalUrl( htmlspecialchars(  $out->getRedirect() ) );
 			return true;
 		}
